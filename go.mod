@@ -1,6 +1,6 @@
 module github.com/assadginem/telegram-openai
 
-go 1.21.7
+go 1.20
 
 require (
 	github.com/PullRequestInc/go-gpt3 v1.2.0
