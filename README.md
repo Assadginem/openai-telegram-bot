@@ -14,6 +14,7 @@ This project is a Telegram Chatbot that integrates OpenAI's GPT-3, utilizing the
 ### Prerequisites
 - Go 1.20+ (check with `go version`, install/update from [Go's official site](https://golang.org/doc/install))
 - Go programming environment.
+- Docker installed and running on your machine. (optional)
 - OpenAI API key with access to the gpt-3.5-turbo-instruct engine.
 - Telegram Bot Token, obtained by creating a bot with Telegram's BotFather.
 
@@ -48,6 +49,13 @@ To start the bot, simply run:
 ```bash
 go run main.go
 ```
+### Running the Bot with Docker
+To run the bot using Docker, build the image and run a container:
+```bash
+   docker build -t telegram-openai-bot .
+   docker run -v config.yaml:/home/appuser/config.yaml --name name -d telegram-openai-bot
+```
+
 
 ## Usage
 Users can interact with the bot by sending messages to it on Telegram. The bot supports custom commands such as `/topic`, `/phrase`, and `/anything` to initiate different types of conversations based on the preamble settings in `config.yaml`.
